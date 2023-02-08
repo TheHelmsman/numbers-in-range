@@ -17,13 +17,13 @@ compress([1, 2]); // '1-2'
 ### Solution:
 ```js
 function compress(list) {
-  const sortedList = list.sort((a, b) => {
-    return a - b;
-  });
+  const sortedList = list.sort((a, b) => { return a - b; });
 
   let result = '';
   let isRange = false;
 
+  if(!list || !list.isArray()) return result;
+  
   sortedList.forEach((prev, idx, array) => {
     const next = array[idx + 1];
     const afterOne = array[idx + 2];
