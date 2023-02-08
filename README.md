@@ -17,13 +17,15 @@ compress([1, 2]); // '1-2'
 ### Solution:
 ```js
 function compress(list) {
-  const sortedList = list.sort((a, b) => { return a - b; });
+  if (!Array.isArray(list)) return '';
+
+  const sortedList = list.sort((a, b) => {
+    return a - b;
+  });
 
   let result = '';
   let isRange = false;
 
-  if(!list || !list.isArray()) return result;
-  
   sortedList.forEach((prev, idx, array) => {
     const next = array[idx + 1];
     const afterOne = array[idx + 2];
@@ -52,8 +54,11 @@ function compress(list) {
   return result;
 }
 
+compress();
+compress([]); // empty string
 compress([1, 4, 5, 2, 3, 9, 8, 11, 0]); // '0-5,8-9,11'
 compress([1, 4, 3, 2]); // '1-4'
 compress([1, 4]); // '1,4'
 compress([1, 2]); // '1-2'
+
 ```
