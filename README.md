@@ -7,7 +7,7 @@ Write a function that receive array of integers and performs analysis which prod
 2. Any numbers that not in range represented as delimeter "," + number not in range + delimeter: ","
 
 ## Examples:
-```
+```js
 compress([1, 4, 5, 2, 3, 9, 8, 11, 0]); // '0-5,8-9,11'
 compress([1, 4, 3, 2]); // '1-4'
 compress([1, 4]); // '1,4'
@@ -15,7 +15,7 @@ compress([1, 2]); // '1-2'
 ```
 
 ### Solution:
-```
+```js
 function compress(list) {
   const sortedList = list.sort((a, b) => {
     return a - b;
