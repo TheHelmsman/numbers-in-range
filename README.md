@@ -3,8 +3,8 @@ Function to check if given array of integers contains numbers in range
 
 ## Task:
 Write a function that receive array of integers and performs analysis which produces following result:
-1. If there are any numbers in array that can be grouped in range, for example 1,2,3,4.... represented as range start number + delimeter "-" + range end number
-2. Any numbers that not in range represented as delimeter "," + number not in range + delimeter: ","
+1. If there are any numbers in array that can be grouped in range (for example 1,2,3,4.... ), represented as range start number + delimeter "-" + range end number
+3. Any numbers that not in range represented as delimeter "," + number not in range + delimeter: ","
 
 ## Examples:
 ```js
