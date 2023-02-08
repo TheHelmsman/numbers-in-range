@@ -19,9 +19,7 @@ compress([1, 2]); // '1-2'
 function compress(list) {
   if (!Array.isArray(list)) return '';
 
-  const sortedList = list.sort((a, b) => {
-    return a - b;
-  });
+  const sortedList = list.sort((a, b) => a - b);
 
   let result = '';
   let isRange = false;
@@ -55,7 +53,7 @@ function compress(list) {
 }
 
 compress();
-compress([]); // empty string
+compress([]);
 compress([1, 4, 5, 2, 3, 9, 8, 11, 0]); // '0-5,8-9,11'
 compress([1, 4, 3, 2]); // '1-4'
 compress([1, 4]); // '1,4'
